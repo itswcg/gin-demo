@@ -7,8 +7,8 @@ require (
 	github.com/Unknwon/com v0.0.0-20190321035513-0fed4efef755 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/denisenkom/go-mssqldb v0.0.0-20190515213511-eb9f6a1743f3 // indirect
-	github.com/gin-gonic/gin v1.4.0 // indirect
-	github.com/go-ini/ini v1.42.0 // indirect
+	github.com/gin-gonic/gin v1.4.0
+	github.com/go-ini/ini v1.42.0
 	github.com/golang/mock v1.3.1 // indirect
 	github.com/google/btree v1.0.0 // indirect
 	github.com/google/pprof v0.0.0-20190515194954-54271f7e092f // indirect
