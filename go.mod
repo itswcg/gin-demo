@@ -7,6 +7,7 @@ require (
 	github.com/Unknwon/com v0.0.0-20190321035513-0fed4efef755
 	github.com/astaxie/beego v1.11.1
 	github.com/denisenkom/go-mssqldb v0.0.0-20190515213511-eb9f6a1743f3 // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/gin-gonic/gin v1.4.0
 	github.com/go-ini/ini v1.42.0
 	github.com/golang/mock v1.3.1 // indirect
