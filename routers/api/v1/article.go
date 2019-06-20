@@ -3,12 +3,12 @@ package v1
 import (
 	"gin-demo/models"
 	"gin-demo/pkg/e"
+	"gin-demo/pkg/logging"
 	"gin-demo/pkg/setting"
 	"gin-demo/pkg/util"
 	"github.com/Unknwon/com"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
-	"log"
 	"net/http"
 )
 
@@ -29,7 +29,7 @@ func GetArticle(c *gin.Context) {
 		}
 	} else {
 		for _, err := range valid.Errors {
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Error("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 
@@ -69,7 +69,7 @@ func GetArticles(c *gin.Context) {
 		data["total"] = models.GetTagTotal(maps)
 	} else {
 		for _, err := range valid.Errors {
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Error("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 
@@ -114,7 +114,7 @@ func AddArticle(c *gin.Context) {
 		}
 	} else {
 		for _, err := range valid.Errors {
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Error("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 
@@ -178,7 +178,7 @@ func EditArticle(c *gin.Context) {
 		}
 	} else {
 		for _, err := range valid.Errors {
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Error("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 
@@ -205,7 +205,7 @@ func DeleteArticle(c *gin.Context) {
 		}
 	} else {
 		for _, err := range valid.Errors {
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Error("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 
