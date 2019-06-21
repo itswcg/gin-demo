@@ -1,14 +1,13 @@
 package routers
 
 import (
-	"gin-demo/middleware/jwt"
+	_ "gin-demo/docs"
 	"gin-demo/pkg/setting"
 	"gin-demo/routers/api"
 	"gin-demo/routers/api/v1"
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
-	_ "gin-demo/docs"
 )
 
 func InitRouter() *gin.Engine {
@@ -22,7 +21,7 @@ func InitRouter() *gin.Engine {
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	api_v1 := r.Group("/api/v1")
-	api_v1.Use(jwt.JWT())
+	//api_v1.Use(jwt.JWT())
 	{
 		//获取标签列表
 		api_v1.GET("/tags", v1.GetTags)
